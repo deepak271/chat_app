@@ -8,6 +8,9 @@ routes.get('/home',services.homepage)
 //API
 routes.post('/api/login',controller.finduser);
 routes.post('/api/adduser',controller.adduser);
-
+routes.get('/api/forget',services.forget);
+routes.post('/api/forget',controller.findemail);
+routes.get('/api/reset',services.reset);
+routes.post('/api/reset',controller.setpass);
 
 module.exports=routes;

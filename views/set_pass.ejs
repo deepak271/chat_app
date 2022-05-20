@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/signup_style.css">
 </head>
 <body>
-    <form action="/api/forget" method="post">
+    <form action="action_page.php">
         <div class="container">
-            <p class="mess"><%=message%></p>
             <h1>Hi User</h1>
-            <p>Please provide your email.</p>
-            <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email">
+         
+
+            <label for="email"><b>Type Password</b></label>
+            <input type="password" placeholder="Enter your password" name="password" required>
         </div>
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Send Forget Link</button>
+            <button type="submit" class="signupbtn">Reset Passwoord</button>
         </div>
     </form>
 </body>

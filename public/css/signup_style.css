@@ -1,7 +1,7 @@
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password],input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -16,12 +16,14 @@ form{
     margin-top: 25px;
 }
 .mess{
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #f44336;
+  background:red;
+  width:400px; 
+  margin:0 auto; 
+  color:#fff; 
+  padding:10px; 
+  text-align:center;
 }
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
