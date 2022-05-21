@@ -3,15 +3,24 @@ const bodyparse = require('body-parser');
 const { getMaxListeners } = require('./server/database/connection');
 const dotenv = require('dotenv').config();
 const path =require('path');
-//const con = require('./server/database/connection')
+const con = require('./server/database/connection')
 const router = require('./server/router/router')
+const session = require('express-session');
+
 const app=express();
+
 //middlewares
 app.use(bodyparse.urlencoded({ extended: true }));
 app.use(bodyparse.json());
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/api/css',express.static(path.join(__dirname,'public/css')));
+app.use(session({
+    secret: "thisismysecrct",
+    saveUninitialized:true,
+    resave: false
+}))
 app.set('view engine','ejs')
+
 //routes
 app.use('/',router)
 //setting port

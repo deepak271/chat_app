@@ -1,0 +1,9 @@
+exports.isAuth=function(req,res,next){
+    if(req.session.islogged)
+     {
+         next();
+     }
+     else{
+         res.redirect('/');
+     }
+}
